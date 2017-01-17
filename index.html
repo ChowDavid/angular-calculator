@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<script src="js/angular.min.js"></script>
+ <script src="js/calculator.js"></script>
+<head>
+    <link rel="stylesheet " href="assets/stylesheets/bootstrap.min.css " />
+   
+
+    <style>
+        .btn-single {
+            min-width: 80px;
+            max-width: 80px;
+            margin: 5px;
+        }
+        
+        .btn-double {
+            min-width: 175px;
+            max-width: 175px;
+            margin: 5px;
+        }
+        
+        .uneditable-input {
+            height: 42px;
+            font-size: 42px;
+            line-height: 35px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body ng-app="CalculatorApp" ng-controller="CalculatorController" ng-init="reset()">
+    <div class="container ">
+        <div id="calculator-screen " class="uneditable-input ">{{result}}</div>
+        <div class="row row-eq-height ">
+            <button ng-click="reset()" type="button " class="col-3 btn btn-primary btn-single btn-lg ">AC</button>
+            <button ng-click="operator('^')" type="button " class="col-3 btn btn-primary btn-single btn-lg ">&and;<sup>n</sup></button>
+            <button ng-click="operator('root')"type="button " class="col-3 btn btn-primary btn-single btn-lg ">&radic;</button>
+            <button ng-click="operator('/')" type="button " class="col-3 btn btn-primary btn-single btn-lg ">&divide;</button>
+        </div>
+        <div class="row row-eq-height ">
+            <button ng-click="number(7)" type="button" class="col-3 btn btn-primary btn-single btn-lg ">7</button>
+            <button ng-click="number(8)" type="button" class="col-3 btn btn-primary btn-single btn-lg ">8</button>
+            <button ng-click="number(9)" type="button" class="col-3 btn btn-primary btn-single btn-lg ">9</button>
+            <button ng-click="operator('*')" type="button" class="col-3 btn btn-primary btn-single btn-lg ">&#215;</button>
+        </div>
+        <div class="row row-eq-height ">
+            <button ng-click="number(4)" type="button" class="col-3 btn btn-primary btn-single btn-lg ">4</button>
+            <button ng-click="number(5)" type="button" class="col-3 btn btn-primary btn-single btn-lg ">5</button>
+            <button ng-click="number(6)" type="button" class="col-3 btn btn-primary btn-single btn-lg ">6</button>
+            <button ng-click="operator('-')" type="button" class="col-3 btn btn-primary btn-single btn-lg ">&#8722;</button>
+        </div>
+        <div class="row row-eq-height ">
+            <button ng-click="number(1)" type="button" class="col-3 btn btn-primary btn-single btn-lg ">1</button>
+            <button ng-click="number(2)" type="button" class="col-3 btn btn-primary btn-single btn-lg ">2</button>
+            <button ng-click="number(3)" type="button"  class="col-3 btn btn-primary btn-single btn-lg ">3</button>
+            <button ng-click="operator('+')" type="button" class="col-3 btn btn-primary btn-single btn-lg ">+</button>
+        </div>
+        <div class="row row-eq-height ">
+            <button ng-click="number(0)" type="button" class="col-6 btn btn-primary btn-double btn-lg ">0</button>
+            <button ng-click="dot()" type="button" class="col-3 btn btn-primary btn-single btn-lg ">.</button>
+            <button ng-click="operator('=')" type="button" class="col-3 btn btn-primary btn-single btn-lg ">=</button>
+        </div>
+
+
+
+    </div>
+</body>
+
+
+</html>
